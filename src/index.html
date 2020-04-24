@@ -1,0 +1,76 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <header class="page_header container">
+    <nav class="nav">
+      <button class="nav_button">
+        <img class="nav_button-icon" src="./img/nav-icon.svg" alt="Navigation" >
+      </button>
+    </nav>
+    <h1 class="page_title">CodeJam Palette</h1>
+    <nav class="menu">
+        <button class="menu_button">
+            <img class="menu_button-icon" src="./img/menu-icon.svg" alt="Menu">
+          </button>    
+    </nav>
+  </header>
+  <main class="page_main container">
+    <aside class="side_menu">
+      <ul class="options_group tools">
+        <li class="option" data-tool="fill">
+          <img class="option-icon" src="./img/fill-icon.png" alt="Fill">
+          <span>Fill bucket (B)</span>
+        </li>
+        <li class="option active" data-tool="pencil">
+          <img class="option-icon" src="./img/pencil-icon.png" alt="Pencil">
+          <span>Pencil (P)</span>
+        </li>
+        <li class="option disabled">
+          <img class="option-icon" src="./img/transform-icon.png" alt="Transform">
+          <span>Transform</span>
+        </li>
+        <li class="option" data-tool="color">
+          <img class="option-icon" src="./img/choose-color-icon.png" alt="Choose color">
+          <span>Choose color (C)</span>
+        </li>
+        <li class="option" data-tool="clear">
+          <span class="option--clear"> Clear field (R)</span>
+       </li>
+      </ul>
+      <ul class="options_group color_palette">
+        <li class="option color_palette-option">
+          <label for="color-input" class="color_palette-input_label">
+            <div class="option-icon color_palette-icon current_color-icon"></div>
+            <span>Current color</span>
+            <input type="color" id="color-input" value="#66ff66">
+          </label>
+        </li>
+        <li class="option color_palette-option prev_color">
+          <div class="option-icon color_palette-icon prev_color-icon"></div>
+          <span>Prev color</span>
+        </li>
+        <li class="option color_palette-option blue_color">
+          <div class="option-icon color_palette-icon blue_color-icon"></div>
+          <span>blue</span>
+        </li>
+        <li class="option color_palette-option red_color">
+          <div class="option-icon color_palette-icon red_color-icon"></div>
+          <span>red</span>
+        </li>
+      </ul>      
+      <ul class="options_group canvas_sizes">
+        <li class="option canvas_size canvas_size--4" data-pixels="4">4*4</li>
+        <li class="option canvas_size canvas_size--32" data-pixels="16">16*16</li>
+        <li class="option canvas_size canvas_size--32" data-pixels="32">32*32</li>
+        <li class="option canvas_size canvas_size--256" data-pixels="256">256*256</li>
+      </ul>
+    </aside>
+    <canvas id="canvas" width="512" height="512"></canvas>
+  </main>
+</body>
+</html>
